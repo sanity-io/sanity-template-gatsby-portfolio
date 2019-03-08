@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "sanity-template-gatsby-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node scripts/build && cd build && npm install",
+    "export": "cd template/studio && sanity dataset export production ../../data/production.tar.gz",
+    "prebuild": "rimraf build",
+    "dev-studio-start": "cd build/studio && npm start",
+    "dev-web-start": "cd build/web && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/sanity-template-gatsby-portfolio.git"
+  },
+  "author": "Sanity <hello@sanity.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanity-io/sanity-template-gatsby-portfolio/issues"
+  },
+  "homepage": "https://github.com/sanity-io/sanity-template-gatsby-portfolio#readme",
+  "devDependencies": {
+    "@sanity/cli": "^0.140.8",
+    "html-entities": "^1.2.1",
+    "istextorbinary": "^2.5.1",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1",
+    "mustache": "^3.0.1",
+    "rimraf": "^2.6.3"
+  }
+}
