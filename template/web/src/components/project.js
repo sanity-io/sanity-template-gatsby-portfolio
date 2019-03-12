@@ -39,7 +39,7 @@ function Project (props) {
                   : format(new Date(publishedAt), 'MMMM Do YYYY')}
               </div>
             )}
-            {members && <RoleList items={members} title='Authors' />}
+            {members && <RoleList items={members} title='Project members' />}
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
