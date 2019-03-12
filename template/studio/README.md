@@ -1,1 +1,1 @@
-# <#<repository.name>#>-studio
+# <#< repository.name >#>-studio
