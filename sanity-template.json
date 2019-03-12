@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "title": "Portfolio with GatsbyJS",
-  "description": "A web portfolio built in GatsbyJS.",
+  "title": "Portfolio with Gatsby",
+  "description": "A web portfolio built in Gatsby.",
   "deployments": [
     {
       "id": "studio",
