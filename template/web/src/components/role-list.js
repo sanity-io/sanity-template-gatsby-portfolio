@@ -1,12 +1,9 @@
 import React from 'react'
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
+import {ucfirst} from '../lib/string-utils'
 
 import styles from './role-list.module.css'
-
-function ucfirst (str) {
-  return `${str.substr(0, 1).toUpperCase()}${str.substr(1)}`
-}
 
 function RoleList ({items, title}) {
   return (
@@ -31,7 +28,7 @@ function RoleList ({items, title}) {
             </div>
             <div>
               <div>
-                <strong>{(item.person && item.person.name) || <em>Missing</em>}</strong>
+                <strong>{(item.person && item.person.name) || <em>Missing name</em>}</strong>
               </div>
               {item.roles && (
                 <div>
