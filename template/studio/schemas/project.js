@@ -27,7 +27,7 @@ export default {
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'blockText'
+      type: 'simplePortableText'
     },
     {
       name: 'members',
@@ -59,7 +59,7 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'portableText'
+      type: 'projectPortableText'
     },
     {
       name: 'relatedProjects',

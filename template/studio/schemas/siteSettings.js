@@ -1,28 +1,35 @@
 export default {
   name: 'siteSettings',
-  title: 'Site Settings',
   type: 'document',
+  title: 'Site Settings',
   fields: [
     {
       name: 'title',
-      title: 'Title',
-      type: 'string'
+      type: 'string',
+      title: 'Title'
     },
     {
       name: 'description',
+      type: 'text',
       title: 'Description',
-      type: 'text'
+      description: 'Describe your portfolio for search engines and social media.'
     },
     {
       name: 'keywords',
-      title: 'Keywords',
       type: 'array',
-      of: [{type: 'string'}]
+      title: 'Keywords',
+      description: 'Add keywords that describes your portfolio.',
+      of: [{type: 'string'}],
+      options: {
+        layout: 'tags'
+      }
     },
     {
       name: 'author',
+      type: 'reference',
+      description: 'Publish an author and set a reference to them here.',
       title: 'Author',
-      type: 'string'
+      to: [{type: 'person'}]
     }
   ]
 }

@@ -2,20 +2,19 @@ import MdPerson from 'react-icons/lib/md/person'
 
 export default {
   name: 'person',
-  title: 'Person',
   type: 'document',
+  title: 'Person',
   icon: MdPerson,
-  liveEdit: false,
   fields: [
     {
       name: 'name',
-      title: 'Name',
-      type: 'string'
+      type: 'string',
+      title: 'Name'
     },
     {
       name: 'slug',
-      title: 'Slug',
       type: 'slug',
+      title: 'Slug',
       description: 'Some frontend will require a slug to be set to be able to show the person',
       options: {
         source: 'name',
@@ -25,23 +24,12 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
+      type: 'figure',
     },
     {
       name: 'bio',
       title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: []
-        }
-      ]
+      type: 'bioPortableText',
     }
   ],
   preview: {

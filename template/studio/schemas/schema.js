@@ -5,16 +5,17 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
-import siteSettings from './siteSettings'
-import person from './person'
 import category from './category'
+import person from './person'
 import project from './project'
+import siteSettings from './siteSettings'
 
 // Object types
-import projectMember from './types/projectMember'
+import bioPortableText from './types/bioPortableText'
 import figure from './types/figure'
-import portableText from './types/portableText'
-import simplePortableText from './simplePortableText'
+import projectMember from './types/projectMember'
+import projectPortableText from './types/projectPortableText'
+import simplePortableText from './types/simplePortableText'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,18 +24,18 @@ export default createSchema({
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    // The following are document types which will appear
-    // in the studio.
-    simplePortableText,
-    portableText,
-    category,
-    figure,
-    person,
-    project,
-    projectMember,
-    siteSettings
-
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
+    bioPortableText,
+    figure,
+    projectMember,
+    projectPortableText,
+    simplePortableText,
+    // The following are document types which will appear
+    // in the studio.
+    category,
+    person,
+    project,
+    siteSettings
   ])
 })
