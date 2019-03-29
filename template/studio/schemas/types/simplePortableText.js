@@ -5,12 +5,12 @@
  *  {
  *    name: 'someName',
  *    title: 'Some title',
- *    type: 'blockContent'
+ *    type: 'simplePortableText'
  *  }
  */
 export default {
-  title: 'Block Text',
-  name: 'blockText',
+  title: 'Portable Text',
+  name: 'simplePortableText',
   type: 'array',
   of: [
     {

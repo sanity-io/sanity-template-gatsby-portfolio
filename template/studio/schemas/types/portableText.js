@@ -5,12 +5,12 @@
  *  {
  *    name: 'someName',
  *    title: 'Some title',
- *    type: 'blockContent'
+ *    type: 'portableText'
  *  }
  */
 export default {
   title: 'Block Content',
-  name: 'blockContent',
+  name: 'portableText',
   type: 'array',
   of: [
     {
@@ -55,8 +55,7 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'image',
-      options: {hotspot: true}
+      type: 'figure'
     }
   ]
 }

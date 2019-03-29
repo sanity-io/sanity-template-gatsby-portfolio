@@ -48,7 +48,7 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'mainImage'
+      type: 'figure'
     },
     {
       name: 'categories',
@@ -59,7 +59,7 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
+      type: 'portableText'
     },
     {
       name: 'relatedProjects',
