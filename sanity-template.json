@@ -7,6 +7,7 @@
       "id": "studio",
       "type": "studio",
       "title": "Content Studio",
+      "description": "The Content Studio is where you edit and structure your content.",
       "dir": "./studio",
       "provider": {
         "name": "netlify",
@@ -26,6 +27,7 @@
       "id": "web",
       "type": "web",
       "title": "Frontend",
+      "description": "A blazing fast portfolio, made for being easy to customize and update.",
       "dir": "./web",
       "requiredTokens": [
         {
