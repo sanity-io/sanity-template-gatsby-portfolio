@@ -7,6 +7,7 @@
       "id": "studio",
       "type": "studio",
       "title": "Content Studio",
+      "description": "The Content Studio is where you edit and structure your content.",
       "dir": "./studio",
       "provider": {
         "name": "netlify",
@@ -15,12 +16,21 @@
           "cmd": "npm run build && cp ./netlify.toml dist",
           "dir": "studio/dist"
         }
+      },
+      "preview": {
+        "images": [
+          {
+            "src": "assets/preview-01.jpg",
+            "alt": "A preview image of the Content Studio."
+          }
+        ]
       }
     },
     {
       "id": "web",
       "type": "web",
       "title": "Frontend",
+      "description": "A blazing fast portfolio, made for being easy to customize and update.",
       "dir": "./web",
       "requiredTokens": [
         {
@@ -37,7 +47,10 @@
       },
       "preview": {
         "images": [
-          { "src": "assets/preview-00.jpg", "alt": "A mock preview image" }
+          {
+            "src": "assets/preview-01.jpg",
+            "alt": "A preview image of the portfolio website."
+          }
         ]
       }
     }
