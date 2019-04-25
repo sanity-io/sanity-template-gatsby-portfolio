@@ -2,13 +2,29 @@
   "version": 1,
   "title": "Portfolio with Gatsby",
   "description": "A web portfolio built in Gatsby.",
+  "previewMedia": {
+    "type": "image",
+    "src": "assets/preview-01.jpg",
+    "alt": "A preview image of the portfolio website."
+  },
+  "technologies": [
+    {
+      "id": "gatsby",
+      "name": "Gatsby",
+      "url": "https://www.gatsbyjs.org/"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "url": "https://www.netlify.com/"
+    }
+  ],
   "deployments": [
     {
       "id": "studio",
       "type": "studio",
       "title": "Content Studio",
       "description": "The Content Studio is where you edit and structure your content.",
-      "dir": "./studio",
       "provider": {
         "name": "netlify",
         "config": {
@@ -17,13 +33,10 @@
           "dir": "studio/dist"
         }
       },
-      "preview": {
-        "images": [
-          {
-            "src": "assets/preview-01.jpg",
-            "alt": "A preview image of the Content Studio."
-          }
-        ]
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/preview-01.jpg",
+        "alt": "A preview image of the Content Studio."
       }
     },
     {
@@ -31,7 +44,6 @@
       "type": "web",
       "title": "Frontend",
       "description": "A blazing fast portfolio, made for being easy to customize and update.",
-      "dir": "./web",
       "requiredTokens": [
         {
           "role": "deploy-studio",
@@ -45,28 +57,11 @@
           "dir": "web/public"
         }
       },
-      "preview": {
-        "images": [
-          {
-            "src": "assets/preview-01.jpg",
-            "alt": "A preview image of the portfolio website."
-          }
-        ]
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/preview-01.jpg",
+        "alt": "A preview image of the portfolio website."
       }
     }
-  ],
-  "metadata": {
-    "technologies": [
-      {
-        "id": "gatsby",
-        "name": "Gatsby",
-        "url": "https://www.gatsbyjs.org/"
-      },
-      {
-        "id": "netlify",
-        "name": "Netlify",
-        "url": "https://www.netlify.com/"
-      }
-    ]
-  }
+  ]
 }
