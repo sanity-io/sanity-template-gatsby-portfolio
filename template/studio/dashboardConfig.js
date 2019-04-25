@@ -1,39 +1,44 @@
 export default {
   widgets: [
-    {name: 'structure-menu'},
-    {name: 'welcome'},
     {name: 'sanity-tutorials'},
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
-        // Commented out until we fix spec of `deployments`
-        // __experimental_before: [
-        //   {
-        //     name: 'netlify',
-        //     options: {
-        //       title: 'Netlify',
-        //       sites: [
-        //         <#<#deployments>#>
-        //         {
-        //           buildHookId: '<#<provider.buildHookId>#>',
-        //           name: '<#<name>#>',
-        //           siteId: '<#<provider.siteId>#>'
-        //         },
-        //         <#</deployments>#>
-        //       ]
-        //     }
-        //   }
-        // ],
+        __experimental_before: [
+          {
+            name: 'netlify',
+            options: {
+              sites: [
+                {
+                  buildHookId: '<#<deployments.studio.providerInfo.buildHookId>#>',
+                  name: 'Content Studio',
+                  siteId: '<#<deployments.studio.providerInfo.siteId>#>'
+                },
+                {
+                  buildHookId: '<#<deployments.web.providerInfo.buildHookId>#>',
+                  name: 'Blog Website',
+                  siteId: '<#<deployments.web.providerInfo.siteId>#>'
+                }
+              ]
+            }
+          }
+        ],
+        data: [
+          {
+            title: 'GitHub repo',
+            value: 'https://github.com/<#<repository.owner>#>/<#<repository.name>#>',
+            category: 'Code'
+          },
+          {title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps'}
+        ]
       }
     },
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recently edited', order: '_updatedAt desc', limit: 10}
-    },
-    {
-      name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', limit: 10, types: ['post']}
+      options: {title: 'Recent projects', order: '_createdAt desc', types: ['project']},
+      layout: {width: 'medium'}
     }
   ]
 }
