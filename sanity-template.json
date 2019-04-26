@@ -31,7 +31,8 @@
           "base": "studio",
           "cmd": "npm run build && cp ./netlify.toml dist",
           "dir": "studio/dist"
-        }
+        },
+        "requirements": ["build-hook"]
       },
       "previewMedia": {
         "type": "image",
@@ -55,7 +56,8 @@
         "config": {
           "cmd": "npm run build-web",
           "dir": "web/public"
-        }
+        },
+        "requirements": ["build-hook"]
       },
       "previewMedia": {
         "type": "image",

@@ -17,7 +17,7 @@ export default {
                 },
                 {
                   buildHookId: '<#<deployments.web.providerInfo.buildHookId>#>',
-                  name: 'Blog Website',
+                  name: 'Portfolio Website',
                   siteId: '<#<deployments.web.providerInfo.siteId>#>'
                 }
               ]
