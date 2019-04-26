@@ -1,8 +1,8 @@
 # <#< repository.name >#>
 
-[![Create this project on Sanity.io button]()](https://www.sanity.io/create?template=sanity-io%2Ftemplate-blog) [![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
+[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
-Create a blog using structured content and a static site builder.
+Create a portfolio using structured content and a static site builder.
 
 ## What you have
 
@@ -28,3 +28,4 @@ Netlify automatically deploys new changes commited to master on GitHub. This goe
 ## Stuck? Get help
 
 Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io)
+
