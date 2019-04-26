@@ -42,7 +42,7 @@
     {
       "id": "web",
       "type": "web",
-      "title": "Frontend",
+      "title": "Portfolio Website",
       "description": "A blazing fast portfolio, made for being easy to customize and update.",
       "requiredTokens": [
         {
