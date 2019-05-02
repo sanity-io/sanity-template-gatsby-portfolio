@@ -4,7 +4,7 @@
   "description": "A web portfolio built in Gatsby.",
   "previewMedia": {
     "type": "image",
-    "src": "assets/preview-01.jpg",
+    "src": "assets/frontend.jpg",
     "alt": "A preview image of the portfolio website."
   },
   "technologies": [
@@ -36,7 +36,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/preview-01.jpg",
+        "src": "assets/studio.jpg",
         "alt": "A preview image of the Content Studio."
       }
     },
@@ -61,7 +61,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/preview-01.jpg",
+        "src": "assets/frontend.jpg",
         "alt": "A preview image of the portfolio website."
       }
     }
