@@ -5,17 +5,17 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
-import category from './category'
-import person from './person'
-import project from './project'
-import siteSettings from './siteSettings'
+import category from './documents/category'
+import person from './documents/person'
+import project from './documents/project'
+import siteSettings from './documents/siteSettings'
 
 // Object types
-import bioPortableText from './types/bioPortableText'
-import figure from './types/figure'
-import projectMember from './types/projectMember'
-import projectPortableText from './types/projectPortableText'
-import simplePortableText from './types/simplePortableText'
+import bioPortableText from './objects/bioPortableText'
+import figure from './objects/figure'
+import projectMember from './objects/projectMember'
+import projectPortableText from './objects/projectPortableText'
+import simplePortableText from './objects/simplePortableText'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
