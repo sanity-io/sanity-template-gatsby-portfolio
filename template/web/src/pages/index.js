@@ -1,6 +1,6 @@
 import React from 'react'
-import {graphql} from 'gatsby'
-import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
+import { graphql } from 'gatsby'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
@@ -9,13 +9,16 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
     }
-
-    projects: allSanityProject(limit: 6, sort: {fields: [publishedAt], order: DESC}) {
+    projects: allSanityProject(
+      limit: 6
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
       edges {
         node {
           id
@@ -53,7 +56,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
 
   if (errors) {
     return (
@@ -65,7 +68,9 @@ const IndexPage = props => {
 
   const site = (data || {}).site
   const projectNodes = (data || {}).projects
-    ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+    ? mapEdgesToNodes(data.projects)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   if (!site) {
@@ -76,14 +81,18 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
+      <SEO
+        title={site.title}
+        description={site.description}
+        keywords={site.keywords}
+      />
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
         {projectNodes && (
           <ProjectPreviewGrid
-            title='Latest projects'
+            title="Latest projects"
             nodes={projectNodes}
-            browseMoreHref='/archive/'
+            browseMoreHref="/archive/"
           />
         )}
       </Container>
