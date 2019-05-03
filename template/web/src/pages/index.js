@@ -1,6 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
+import {
+  mapEdgesToNodes,
+  filterOutDocsWithoutSlugs,
+  filterOutDocsPublishedInTheFuture
+} from '../lib/helpers'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
