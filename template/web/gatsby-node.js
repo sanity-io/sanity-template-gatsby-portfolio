@@ -1,4 +1,4 @@
-const { isFuture } = require('date-fns')
+const {isFuture} = require('date-fns')
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -6,12 +6,10 @@ const { isFuture } = require('date-fns')
  */
 
 async function createProjectPages (graphql, actions, reporter) {
-  const { createPage, createPageDependency } = actions
+  const {createPage, createPageDependency} = actions
   const result = await graphql(`
     {
-      allSanityProject(
-        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
+      allSanityProject(filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
         edges {
           node {
             id
@@ -41,13 +39,13 @@ async function createProjectPages (graphql, actions, reporter) {
       createPage({
         path,
         component: require.resolve('./src/templates/project.js'),
-        context: { id }
+        context: {id}
       })
 
-      createPageDependency({ path, nodeId: id })
+      createPageDependency({path, nodeId: id})
     })
 }
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = async ({graphql, actions, reporter}) => {
   await createProjectPages(graphql, actions, reporter)
 }
