@@ -22,4 +22,4 @@ You develop the templates in `/template`, and review your changes in `/build`.
 
 ## Notes
 
-When developing ProjectId and dataset name can be changed in `template-values-development.json`
+When developing, you may change `projectId` and `dataset` in `dev/template-values-development.json` to connect with a different Sanity project.
