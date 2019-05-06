@@ -7,9 +7,11 @@
     "copy-studio-node-modules": "cp -R build/studio/node_modules template/studio/node_modules",
     "copy-web-node-modules": "cp -R build/web/node_modules template/web/node_modules",
     "dev": "sanity-template watch --template-values dev/template-values-development.json",
-    "export": "cd build/studio && sanity dataset export portfolio ../../data/production.tar.gz"
+    "export": "cd build/studio && sanity dataset export portfolio ../../data/production.tar.gz",
+    "precommit": "npm run build && (cd build && npm run lint)"
   },
   "devDependencies": {
+    "husky": "^2.2.0",
     "sanity-template-tools": "^1.0.0-alpha.1"
   }
 }
