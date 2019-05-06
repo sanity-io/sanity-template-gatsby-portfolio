@@ -24,12 +24,12 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'figure',
+      type: 'figure'
     },
     {
       name: 'bio',
       title: 'Bio',
-      type: 'bioPortableText',
+      type: 'bioPortableText'
     }
   ],
   preview: {
