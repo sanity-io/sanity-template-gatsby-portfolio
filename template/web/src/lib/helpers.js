@@ -13,7 +13,7 @@ export function filterOutDocsWithoutSlugs ({slug}) {
   return (slug || {}).current
 }
 
-export function filterOutDocsPublishedInTheFuture({publishedAt}) {
+export function filterOutDocsPublishedInTheFuture ({publishedAt}) {
   return !isFuture(publishedAt)
 }
 
