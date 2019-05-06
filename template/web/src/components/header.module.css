@@ -19,7 +19,7 @@
 }
 
 .branding {
-  font-weight: 700;
+  font-weight: 600;
   flex: 1;
 
   @nest & a {
@@ -30,7 +30,7 @@
 
     @media (hover: hover) {
       @nest &:hover {
-        text-decoration: underline;
+        color: var(--color-accent);
       }
     }
   }
@@ -44,9 +44,11 @@
   margin: 0;
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
+  color: inherit;
 
   & svg {
     display: block;
+    fill: inherit;
   }
 
   @media (--media-min-small) {
@@ -70,17 +72,18 @@
 
   @media (hover: hover) {
     @nest & ul li a:hover {
-      text-decoration: underline;
+      color: var(--color-accent);
     }
   }
 
   @media (--media-max-small) {
     position: absolute;
-    background: #fff;
+    background: var(--color-white);
+    color: var(--color-black);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
-    top: 4rem;
+    top: 4.3rem;
 
     @nest & ul {
       padding: 1rem 0;

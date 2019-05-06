@@ -1,0 +1,11 @@
+@import '../styles/custom-properties.css';
+
+.root {
+  margin: 2rem 0;
+
+  @nest & figcaption {
+    font-size: var(--font-small-size);
+    line-height: var(--font-small-line-height);
+    margin: 0.5rem 0 0;
+  }
+}

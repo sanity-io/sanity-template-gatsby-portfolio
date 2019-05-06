@@ -2,25 +2,37 @@
 @import '../styles/custom-properties.css';
 
 .content {
-  min-height: calc(100% - 73px - 152px);
+  background: var(--color-white);
+  min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {
-    min-height: calc(100% - 90px - 169px);
+    min-height: calc(100% - 88px - 150px);
   }
 }
 
 .footer {
+  border-top: 1px solid var(--color-very-light-gray);
 
+  @nest & a {
+    color: inherit;
+    text-decoration: none;
+
+    @media (hover: hover) {
+      @nest &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
 }
 
 .footerWrapper {
   box-sizing: border-box;
   max-width: 960px;
-  padding: 1.5em;
+  padding: 4.5em 1.5em 1.5em;
   margin: 0 auto;
 
   @media (--media-min-small) {
-    padding: 2em;
+    padding: 6em 2em 2em;
   }
 }
 
@@ -33,8 +45,4 @@
   text-align: center;
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
-
-  @nest & a {
-    color: inherit;
-  }
 }
