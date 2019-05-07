@@ -14,6 +14,8 @@ export default {
           {
             name: 'netlify',
             options: {
+              description:
+                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
                   buildHookId: '<#<deployments.studio.providerInfo.buildHookId>#>',
