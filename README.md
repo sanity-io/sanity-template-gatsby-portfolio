@@ -1,10 +1,12 @@
 # sanity-template-gatsby-portfolio
 
+_Clean React.js starting point for portfolios, project listings or case studies._
+
 This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it out by [creating this project](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-portfolio).
 
 The template contains both a Sanity.io Sanity Studio and a front-end in Gatsby. Both are deployed on Netlify.
 
-Feel free to clone this template to create your own automagic project creation experiences.
+Want to make a template for Sanity and your favourite front-end framework? We’re still maturing [sanity.io/create](https://sanity.io/create) and our APIs, but do tell us about it on [slack.sanity.io](https://slack.sanity.io).
 
 ![The Gatsby and Sanity powered portfolio frontend](https://github.com/sanity-io/sanity-template-gatsby-portfolio/blob/master/assets/frontend.jpg?raw=true)
 
