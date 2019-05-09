@@ -1,11 +1,11 @@
 {
   "version": 0,
   "title": "Portfolio with Gatsby",
-  "description": "A web portfolio built in Gatsby.",
+  "description": "Clean React.js starting point for portfolios, project listings or case studies.",
   "previewMedia": {
     "type": "image",
     "src": "assets/frontend.jpg",
-    "alt": "A preview image of the portfolio website."
+    "alt": "A preview image of the Gatsby portfolio website."
   },
   "technologies": [
     {
@@ -67,7 +67,7 @@
       "requiredCorsOrigins": [
         {
           "origin": "http://localhost:8000",
-          "allowCredentials": true
+          "allowCredentials": false
         }
       ]
     }
