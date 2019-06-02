@@ -11,7 +11,7 @@
     "precommit": "npm run build && (cd build && npm run lint)"
   },
   "devDependencies": {
-    "husky": "^2.2.0",
+    "husky": "^2.3.0",
     "sanity-template-tools": "^1.0.0-alpha.1"
   }
 }
