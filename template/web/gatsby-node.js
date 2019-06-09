@@ -6,7 +6,7 @@ const {isFuture} = require('date-fns')
  */
 
 async function createProjectPages (graphql, actions, reporter) {
-  const {createPage, createPageDependency} = actions
+  const {createPage} = actions
   const result = await graphql(`
     {
       allSanityProject(filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
@@ -41,8 +41,6 @@ async function createProjectPages (graphql, actions, reporter) {
         component: require.resolve('./src/templates/project.js'),
         context: {id}
       })
-
-      createPageDependency({path, nodeId: id})
     })
 }
 
