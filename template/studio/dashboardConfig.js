@@ -39,7 +39,11 @@ export default {
             value: 'https://github.com/<#<repository.owner>#>/<#<repository.name>#>',
             category: 'Code'
           },
-          {title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps'}
+          {
+            title: 'Frontend',
+            value: '<#<deployments.web.url>#>',
+            category: 'apps'
+          }
         ]
       }
     },

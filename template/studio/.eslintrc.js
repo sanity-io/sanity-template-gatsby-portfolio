@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   extends: ['standard', 'standard-react'],
   parser: 'babel-eslint',
