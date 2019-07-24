@@ -46,6 +46,7 @@
       "type": "web",
       "title": "Portfolio Website",
       "description": "A blazing fast portfolio, made for being easy to customize and update.",
+      "dir": "./web",
       "requiredTokens": [
         {
           "role": "deploy-studio",
