@@ -8,10 +8,15 @@
     "copy-web-node-modules": "cp -R build/web/node_modules template/web/node_modules",
     "dev": "sanity-template watch --template-values dev/template-values-development.json",
     "export": "cd build/studio && sanity dataset export portfolio ../../data/production.tar.gz",
-    "precommit": "npm run build && (cd build && npm run lint)"
+    "lint-build": "npm run build && (cd build && npm install && npm run lint)"
   },
   "devDependencies": {
-    "husky": "^2.3.0",
+    "husky": "^2.7.0",
     "sanity-template": "^1.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "([ -z \"$SKIP_HOOK\" ] && sanity-template lockfiles && git add '*package-lock.json*' && git diff --quiet && SKIP_HOOK=1 git commit -m 'Generate lockfiles') && echo 'Committed lockfiles' || echo ''"
+    }
   }
 }
