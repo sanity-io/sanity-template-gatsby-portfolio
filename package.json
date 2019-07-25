@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "husky": "^2.3.0",
-    "sanity-template-tools": "^1.0.0-alpha.1"
+    "sanity-template": "^1.0.2"
   }
 }
