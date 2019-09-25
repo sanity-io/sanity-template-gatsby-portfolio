@@ -1,0 +1,9 @@
+version: 1
+update_configs:
+  - package_manager: "javascript"
+    directory: "/template"
+    update_schedule: "live"
+    automerged_updates:
+      - match:
+          dependency_name: "@sanity/*"
+          update_type: "all"
