@@ -5,5 +5,4 @@ update_configs:
     update_schedule: "live"
     automerged_updates:
       - match:
-          dependency_name: "@sanity/*"
-          update_type: "all"
+          dependency_name: "@sanity*"
