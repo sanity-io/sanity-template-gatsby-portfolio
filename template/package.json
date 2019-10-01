@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "<#< repository.name >#>",
+  "name": "sanity-gatsby-portfolio",
   "version": "0.0.0",
   "scripts": {
     "build": "lerna run build --parallel",
