@@ -1,8 +1,8 @@
 import {format} from 'date-fns'
 
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'sampleProject',
+  title: 'Sample project',
   type: 'document',
   fields: [
     {
@@ -67,7 +67,7 @@ export default {
       name: 'relatedProjects',
       title: 'Related projects',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'project'}}]
+      of: [{type: 'reference', to: {type: 'sampleProject'}}]
     }
   ],
   preview: {
@@ -77,7 +77,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+    prepare({title = 'No title', publishedAt, slug = {}, media}) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
