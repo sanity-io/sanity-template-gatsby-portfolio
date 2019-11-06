@@ -45,7 +45,13 @@ function Project (props) {
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
                 <ul>
                   {categories.map(category => (
-                    <li key={category._id}>{category.title}</li>
+                    <li key={category._id}>
+                      {category.slug ? (
+                        <Link to={`/category/${category.slug.current}`}>{category.title}</Link>
+                      ) : (
+                        <span>{category.title}</span>
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>

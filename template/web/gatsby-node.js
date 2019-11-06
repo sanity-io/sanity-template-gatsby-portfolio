@@ -5,7 +5,7 @@ const {isFuture} = require('date-fns')
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createProjectPages (graphql, actions, reporter) {
+exports.createPages = async ({graphql, actions, reporter}) => {
   const {createPage} = actions
   const result = await graphql(`
     {
@@ -17,6 +17,13 @@ async function createProjectPages (graphql, actions, reporter) {
             slug {
               current
             }
+            categories {
+              id
+              title
+              slug {
+                current
+              }
+            }
           }
         }
       }
@@ -27,6 +34,11 @@ async function createProjectPages (graphql, actions, reporter) {
 
   const projectEdges = (result.data.allSanityProject || {}).edges || []
 
+  createProjectPages({projectEdges, createPage, reporter})
+  createCategoryPages({projectEdges, createPage, reporter})
+}
+
+const createProjectPages = ({projectEdges, createPage, reporter}) => {
   projectEdges
     .filter(edge => !isFuture(edge.node.publishedAt))
     .forEach(edge => {
@@ -44,6 +56,27 @@ async function createProjectPages (graphql, actions, reporter) {
     })
 }
 
-exports.createPages = async ({graphql, actions, reporter}) => {
-  await createProjectPages(graphql, actions, reporter)
+const createCategoryPages = ({projectEdges, createPage, reporter}) => {
+  const allCategories = new Set()
+
+  projectEdges
+    .filter(edge => !isFuture(edge.node.publishedAt))
+    .forEach(({node: {categories}}) => {
+      if (!Array.isArray(categories)) return
+      categories.forEach(category => allCategories.add(category))
+    })
+
+  allCategories.forEach(category => {
+    const id = category.id
+    const slug = category.slug.current
+    const path = `/category/${slug}`
+
+    reporter.info(`Creating category page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/category.js'),
+      context: {category, id}
+    })
+  })
 }
