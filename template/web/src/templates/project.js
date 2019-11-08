@@ -8,7 +8,7 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query ProjectTemplateQuery($id: String!) {
-    project: sanityProject(id: {eq: $id}) {
+    sampleProject: sanitySampleProject(id: {eq: $id}) {
       id
       publishedAt
       categories {
@@ -83,7 +83,7 @@ export const query = graphql`
 
 const ProjectTemplate = props => {
   const {data, errors} = props
-  const project = data && data.project
+  const project = data && data.sampleProject
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
