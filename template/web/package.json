@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-portfolio-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -20,8 +20,8 @@
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-sanity": "^4.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
