@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-portfolio-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/image-url": "^0.140.18",
+    "@sanity/image-url": "^0.140.19",
     "date-fns": "^1.30.1",
     "gatsby": "^2.9.11",
     "gatsby-image": "^2.0.41",
