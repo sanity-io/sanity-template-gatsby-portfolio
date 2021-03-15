@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import ProjectPreview from "./project-preview";
 
-import styles from "./project-preview-grid.module.css";
+import * as styles from "./project-preview-grid.module.css";
 
 function ProjectPreviewGrid(props) {
   return (

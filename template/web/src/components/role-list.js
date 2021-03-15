@@ -3,7 +3,7 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import { ucfirst } from "../lib/string-utils";
 
-import styles from "./role-list.module.css";
+import * as styles from "./role-list.module.css";
 
 function RoleList({ items, title }) {
   return (
