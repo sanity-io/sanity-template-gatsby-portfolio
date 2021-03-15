@@ -1,11 +1,11 @@
-import React from 'react'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import {ucfirst} from '../lib/string-utils'
+import React from "react";
+import { buildImageObj } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
+import { ucfirst } from "../lib/string-utils";
 
-import styles from './role-list.module.css'
+import styles from "./role-list.module.css";
 
-function RoleList ({items, title}) {
+function RoleList({ items, title }) {
   return (
     <div className={styles.root}>
       <h2 className={styles.headline}>{title}</h2>
@@ -19,9 +19,9 @@ function RoleList ({items, title}) {
                     src={imageUrlFor(buildImageObj(item.person.image))
                       .width(100)
                       .height(100)
-                      .fit('crop')
+                      .fit("crop")
                       .url()}
-                    alt=''
+                    alt=""
                   />
                 )}
               </div>
@@ -35,11 +35,11 @@ function RoleList ({items, title}) {
                   {item.roles.map((role, idx) => {
                     switch (true) {
                       case idx === 0:
-                        return <span key={role}>{ucfirst(role)}</span>
+                        return <span key={role}>{ucfirst(role)}</span>;
                       case idx === item.roles.length - 1:
-                        return <span key={role}> & {role}</span>
+                        return <span key={role}> & {role}</span>;
                       default:
-                        return <span key={role}>, {role}</span>
+                        return <span key={role}>, {role}</span>;
                     }
                   })}
                 </div>
@@ -49,7 +49,7 @@ function RoleList ({items, title}) {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
-export default RoleList
+export default RoleList;
