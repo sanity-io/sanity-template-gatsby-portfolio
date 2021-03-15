@@ -10,7 +10,7 @@ The template contains both the Sanity Studio and a front-end in Gatsby. Both are
 
 Want to make a template for Sanity and your favourite front-end framework? We’re still maturing [sanity.io/create](https://sanity.io/create) and our APIs, but do tell us about it on [slack.sanity.io](https://slack.sanity.io).
 
-![The Gatsby and Sanity powered portfolio frontend](https://github.com/sanity-io/sanity-template-gatsby-portfolio/blob/master/assets/frontend.jpg?raw=true)
+![The Gatsby and Sanity powered portfolio frontend](https://github.com/sanity-io/sanity-template-gatsby-portfolio/blob/main/assets/frontend.jpg?raw=true)
 
 ## Local development
 
