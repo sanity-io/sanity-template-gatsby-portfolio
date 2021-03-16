@@ -7,7 +7,7 @@ import BlockContent from "./block-content";
 import Container from "./container";
 import RoleList from "./role-list";
 
-import styles from "./project.module.css";
+import * as styles from "./project.module.css";
 
 function Project(props) {
   const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props;
