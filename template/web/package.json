@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-portfolio-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -12,8 +12,8 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/image-url": "^0.140.18",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/image-url": "^1.0.0",
     "date-fns": "^1.30.1",
     "gatsby": "^3.0.4",
     "gatsby-plugin-image": "^1.0.1",
