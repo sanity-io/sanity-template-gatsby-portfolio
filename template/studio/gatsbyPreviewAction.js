@@ -10,7 +10,7 @@ export function gatsbyPreviewAction({ published, draft }) {
   } else if (draft) {
     id = draft._id.split("drafts.")[1];
   }
-  const updatedAt = doc?._updatedAt?.split(".")[0].split("Z")[0] + "Z";
+  const updatedAt = doc?._updatedAt?.split(".")[0].split("Z")[0] + ".000Z";
 
   return {
     disabled: !id,
