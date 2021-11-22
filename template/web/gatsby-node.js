@@ -37,7 +37,8 @@ async function createProjectPages (graphql, actions) {
       createPage({
         path,
         component: require.resolve('./src/templates/project.js'),
-        context: {id}
+        context: {id}, 
+        ownerNodeId: id,
       })
     })
 }
