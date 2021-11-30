@@ -1,26 +1,20 @@
-// Load variables from `.env` as soon as possible
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV || 'development'}`
-})
-
-const clientConfig = require('./client-config')
-const token = process.env.SANITY_READ_TOKEN
-
-const isProd = process.env.NODE_ENV === 'production'
+require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    title: "Gatsby Blog Demo",
+  },
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-image',
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "../plugins/gatsby-source-datocms",
       options: {
-        ...clientConfig.sanity,
-        token,
-        watchMode: !isProd,
-        overlayDrafts: !isProd && token
-      }
-    }
-  ]
-}
+        apiToken: process.env.DATO_API_TOKEN,
+        environment: process.env.DATO_ENVIRONMENT,
+        previewMode: true,
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
+  ],
+};
