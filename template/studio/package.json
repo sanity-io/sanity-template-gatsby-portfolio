@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-portfolio-studio",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
@@ -25,8 +25,8 @@
     "@sanity/studio-hints": "^2.21.10",
     "date-fns": "^2.27.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.3.1",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
     "sanity-plugin-dashboard-widget-netlify": "^1.2.1",
